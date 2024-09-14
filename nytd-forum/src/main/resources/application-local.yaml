@@ -1,0 +1,6 @@
+#application-local.yaml
+db:
+  host: localhost
+  pw: 983003972
+redis:
+  host: localhost

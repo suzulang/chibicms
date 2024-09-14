@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${db.host}:3306/nytd_forum
+    username: root
+    password: ${db.pw}
+  profiles:
+      active: local #本地测试改成localhost
+  data:
+    redis:
+      host: ${redis.host}
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+logging:
+  level:
+    com.apache.ibatis: DEBUG
+    org.mybatis.spring: DEBUG
+    java.sql: DEBUG
+
+qiniu:
+  accessKey: ig3UWFBY8XSlh4w7ghIOdRdPtFGPfP3MXreakJ2H
+  secretKey: aQm7wm80V3H1AEBSrzlahHMS8G6LuvG7IPKUKJFi
+  bucket: nytd-forum
+  domain: cdn.jtp26.vip
+  useHttps: true

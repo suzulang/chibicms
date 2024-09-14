@@ -1,0 +1,5 @@
+db:
+  host: nytd-forum-mysql #这里用容器名
+  pw: 983003972
+redis:
+  host: nytd-forum-redis #这里用容器名
